@@ -1,0 +1,150 @@
+﻿@model IEnumerable<Implement_Role_Based_Authorization.Models.PerformanceCellsUpdated>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PerformanceCell)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubPerformanceCell)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubSubPerformanceCell)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Division)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Subdivision)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Scheme)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessUnit)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Years)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Splits)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedUser)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SubDivisionExclude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DepartmentExclude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PartnerExclude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClassExclude)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SchemeExclude)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PerformanceCell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubPerformanceCell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubSubPerformanceCell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Division)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subdivision)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Partner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Scheme)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Company)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessUnit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Years)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Splits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedUser)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubDivisionExclude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentExclude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PartnerExclude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ClassExclude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SchemeExclude)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Pckey">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Pckey">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Pckey">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

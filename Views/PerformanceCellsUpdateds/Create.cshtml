@@ -1,0 +1,129 @@
+﻿@model Implement_Role_Based_Authorization.Models.PerformanceCellsUpdated
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+
+<h4>PerformanceCellsUpdated</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PerformanceCell" class="control-label"></label>
+                <input asp-for="PerformanceCell" class="form-control" />
+                <span asp-validation-for="PerformanceCell" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubPerformanceCell" class="control-label"></label>
+                <input asp-for="SubPerformanceCell" class="form-control" />
+                <span asp-validation-for="SubPerformanceCell" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubSubPerformanceCell" class="control-label"></label>
+                <input asp-for="SubSubPerformanceCell" class="form-control" />
+                <span asp-validation-for="SubSubPerformanceCell" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Division" class="control-label"></label>
+                <input asp-for="Division" class="form-control" />
+                <span asp-validation-for="Division" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subdivision" class="control-label"></label>
+                <input asp-for="Subdivision" class="form-control" />
+                <span asp-validation-for="Subdivision" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Partner" class="control-label"></label>
+                <input asp-for="Partner" class="form-control" />
+                <span asp-validation-for="Partner" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Class" class="control-label"></label>
+                <input asp-for="Class" class="form-control" />
+                <span asp-validation-for="Class" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Scheme" class="control-label"></label>
+                <input asp-for="Scheme" class="form-control" />
+                <span asp-validation-for="Scheme" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company" class="control-label"></label>
+                <input asp-for="Company" class="form-control" />
+                <span asp-validation-for="Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BusinessUnit" class="control-label"></label>
+                <input asp-for="BusinessUnit" class="form-control" />
+                <span asp-validation-for="BusinessUnit" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Years" class="control-label"></label>
+                <input asp-for="Years" class="form-control" />
+                <span asp-validation-for="Years" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Splits" class="control-label"></label>
+                <input asp-for="Splits" class="form-control" />
+                <span asp-validation-for="Splits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedDate" class="control-label"></label>
+                <input asp-for="ModifiedDate" class="form-control" />
+                <span asp-validation-for="ModifiedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedUser" class="control-label"></label>
+                <input asp-for="ModifiedUser" class="form-control" />
+                <span asp-validation-for="ModifiedUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SubDivisionExclude" class="control-label"></label>
+                <input asp-for="SubDivisionExclude" class="form-control" />
+                <span asp-validation-for="SubDivisionExclude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepartmentExclude" class="control-label"></label>
+                <input asp-for="DepartmentExclude" class="form-control" />
+                <span asp-validation-for="DepartmentExclude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PartnerExclude" class="control-label"></label>
+                <input asp-for="PartnerExclude" class="form-control" />
+                <span asp-validation-for="PartnerExclude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClassExclude" class="control-label"></label>
+                <input asp-for="ClassExclude" class="form-control" />
+                <span asp-validation-for="ClassExclude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SchemeExclude" class="control-label"></label>
+                <input asp-for="SchemeExclude" class="form-control" />
+                <span asp-validation-for="SchemeExclude" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

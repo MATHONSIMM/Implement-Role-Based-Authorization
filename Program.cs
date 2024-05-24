@@ -6,7 +6,9 @@ var connectionString = builder.Configuration.GetConnectionString("Implement_Role
 
 builder.Services.AddDbContext<Implement_Role_Based_AuthorizationContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<Implement_Role_Based_AuthorizationContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>().AddDefaultTokenProviders()
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<Implement_Role_Based_AuthorizationContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

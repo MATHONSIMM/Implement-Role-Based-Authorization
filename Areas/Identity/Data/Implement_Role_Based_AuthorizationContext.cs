@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Implement_Role_Based_Authorization.Models;
 
 namespace Implement_Role_Based_Authorization.Data;
 
@@ -18,4 +19,6 @@ public class Implement_Role_Based_AuthorizationContext : IdentityDbContext<Ident
         // For example, you can rename the ASP.NET Identity table names and more.
         // Add your customizations after calling base.OnModelCreating(builder);
     }
+
+    public DbSet<Implement_Role_Based_Authorization.Models.PerformanceCellsUpdated> PerformanceCellsUpdated { get; set; } = default!;
 }
